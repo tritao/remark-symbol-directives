@@ -1,30 +1,42 @@
-# Starlight's `<Asides/>`s for Astro md/mdx
+# remark symbol directives 
 
-Add asides with remark directives
+Add symbol icons with remark directives
 [npm package](https://www.npmjs.com/package/astro-starlight-remark-asides)
 
-1. note
-2. tip
-3. caution
-4. danger
-5. success
-
-```md
-:::note[Title]
-text
-:::
-```
+* `:api[array]`
+* `:api[boolean]`
+* `:api[method]`
+* `:api[function]`
+* `:api[constructor]`
+* `:api[field]`
+* `:api[variable]`
+* `:api[class]`
+* `:api[struct]`
+* `:api[interface]`
+* `:api[module]`
+* `:api[property]`
+* `:api[event]`
+* `:api[operator]`
+* `:api[unit]`
+* `:api[value]`
+* `:api[constant]`
+* `:api[enum]`
+* `:api[enummember]`
+* `:api[keyword]`
+* `:api[text]`
+* `:api[color]`
+* `:api[file]`
 
 ## Dark and light theme
 
-uses `:root[data-theme="dark"]` by default, but this can be changed on line 21 of `styles.css`
+uses `:root[data-theme="dark"]` by default.
 
 ![light theme example](./imgs/light.png)
 ![dark theme example](./imgs/dark.png)
 
 ## Requirements
 
-Must add [remark-directive](https://github.com/remarkjs/remark-directive) plugin to your remark plugins before `astro-starlight-remark-asides`.
+Must add [remark-directive](https://github.com/remarkjs/remark-directive) plugin to your remark plugins before `remark-symbol-directives`.
 
 ## Copy files and use
 
@@ -33,12 +45,12 @@ Must add [remark-directive](https://github.com/remarkjs/remark-directive) plugin
 ```ts
 import { defineConfig } from "astro/config";
 import remarkDirective from "remark-directive";
-import astroStarlightRemarkAsides from "./src/path/to/index.js";
+import remarkSymbolDirectives from "./src/path/to/index.js";
 
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    remarkPlugins: [remarkDirective, astroStarlightRemarkAsides],
+    remarkPlugins: [remarkDirective, remarkSymbolDirectives],
   },
 });
 ```
@@ -60,12 +72,12 @@ import "src/path/to/styles.css";
 ```ts
 import { defineConfig } from "astro/config";
 import remarkDirective from "remark-directive";
-import astroStarlightRemarkAsides from "astro-starlight-remark-asides";
+import remarkSymbolDirectives from remark-symbol-directives";
 
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    remarkPlugins: [remarkDirective, astroStarlightRemarkAsides],
+    remarkPlugins: [remarkDirective, remarkSymbolDirectives],
   },
 });
 ```
@@ -75,7 +87,7 @@ export default defineConfig({
 ```ts
 // src/[slug].astro
 ---
-import "astro-starlight-remark-asides/styles.css";
+import "remark-symbol-directives/styles.css";
 ---
 <!--  -->
 ```

@@ -12,5 +12,5 @@ declare module "astro-starlight-remark-asides" {
    * 
    * dark mode styles are based on `:root[data-theme="dark"]` 
    */
-  export default function astroStarlightRemarkAsides(): (tree: any) => void;
+  export default function starlightApiAsides(): (tree: any) => void;
 }

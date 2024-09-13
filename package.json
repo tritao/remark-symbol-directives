@@ -1,12 +1,12 @@
 {
-  "name": "astro-starlight-remark-asides",
-  "version": "0.0.7",
-  "description": "Use remark directives to get asides in .md/.mdx styled like starlight's asides",
+  "name": "remark-symbol-directives",
+  "version": "0.0.3",
+  "description": "Use remark directives to get API-related symbol icons",
   "license": "MIT",
   "keywords": [
     "remark",
-    "asides",
-    "callouts",
+    "symbols",
+    "api",
     "remark-directives",
     "mdx",
     "md",
@@ -15,25 +15,35 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OliverSpeir/astro-starlight-remark-asides.git"
+    "url": "git+https://github.com/tritao/remark-symbol-directives.git"
   },
   "bugs": {
-    "url": "https://github.com/OliverSpeir/astro-starlight-remark-asides/issues"
+    "url": "https://github.com/tritao/remark-symbol-directives/issues"
   },
-  "homepage": "https://github.com/OliverSpeir/astro-starlight-remark-asides#readme",
+  "homepage": "https://github.com/tritao/remark-symbol-directives#readme",
   "type": "module",
-  "main": "index.js",
-  "types": "types.d.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
   "files": [
-    "index.js",
-    "styles.css",
-    "types.d.ts"
+    "index.ts",
+    "styles.css"
   ],
+  "devDependencies": {
+    "@astrojs/starlight": "^0.27.1",
+    "astro": "^4.15.4",
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
+    "mdast-util-to-hast": "^13.0.0",
+    "mdast-util-directive": "^3.0.0"
+  },
   "peerDependencies": {
+    "@astrojs/starlight": ">=0.27",
     "remark-directive": "^3.0.0"
   },
   "dependencies": {
     "unist-util-visit": "^5.0.0",
-    "hastscript": "^8.0.0"
+    "hastscript": "^8.0.0",
+    "hast-util-from-html": "^2.0.2"
   }
 }
